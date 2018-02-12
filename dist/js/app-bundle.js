@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e8d71f3c47422b0a4413"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "95e33102e85be7282e8b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -752,17 +752,15 @@ var _youDontKnowJs2 = _interopRequireDefault(_youDontKnowJs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var inputBlur = document.getElementById("blur"),
-    inputBrightness = document.getElementById("brightness"),
+var brightness = document.getElementById("brightness"),
+    contrast = document.getElementById("contrast"),
     imageContainer = document.getElementById("image-preview"),
-    filtersInputs = document.getElementsByClassName("filterInput");
+    filtersInputs = document.getElementsByClassName("filter-range");
 
 var img = document.createElement("img");
 img.setAttribute("src", _youDontKnowJs2.default);
 img.className = "preview__image";
 imageContainer.appendChild(img);
-
-var val = null;
 
 function defaultFilters() {
     for (var i = 0; i < filtersInputs.length; i++) {
@@ -771,6 +769,8 @@ function defaultFilters() {
 }
 
 defaultFilters();
+
+var val = null;
 
 function update(filter, unit) {
     var newval = +filter.value;
@@ -782,19 +782,33 @@ function update(filter, unit) {
     }
 }
 
-function blur() {
-    update(inputBlur);
+function brightnessF() {
+    update(brightness);
 }
 
-function brightness() {
-    update(inputBrightness);
+function contrastF() {
+    update(contrast);
 }
 
-inputBlur.addEventListener("input", blur, false);
-inputBlur.addEventListener("input", blur, false);
+function grayscaleF() {
+    update(grayscale);
+}
 
-inputBrightness.addEventListener("input", brightness, false);
-inputBrightness.addEventListener("input", brightness, false);
+function invertF() {
+    update(invert);
+}
+
+brightness.addEventListener("input", brightnessF, false);
+brightness.addEventListener("input", brightnessF, false);
+
+contrast.addEventListener("input", contrastF, false);
+contrast.addEventListener("input", contrastF, false);
+
+grayscale.addEventListener("input", grayscaleF, false);
+grayscale.addEventListener("input", grayscaleF, false);
+
+invert.addEventListener("input", invertF, false);
+invert.addEventListener("input", invertF, false);
 
 /***/ }),
 /* 1 */
@@ -842,7 +856,7 @@ inputBrightness.addEventListener("input", brightness, false);
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "images/you-dont-know-js.jpg";
+module.exports = __webpack_require__.p + "/images/you-dont-know-js.jpg";
 
 /***/ })
 /******/ ]);

@@ -485,6 +485,7 @@ a {
   top: 0;
   bottom: 0;
   margin: auto;
+  filter: brightness(var(--brightness)) contrast(var(--contrast)) grayscale(var(--grayscale)) invert(var(--invert));
 }
 .preview__filterValueList {
   position: absolute;

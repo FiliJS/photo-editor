@@ -1,0 +1,34 @@
+@import "./base/variables.styl"
+
+.header
+    background-color $color-default
+    height 55px
+    line-height 55px
+    padding-left 0.5em
+    box-sizing border-box
+    display flex
+    justify-content space-between
+
+.header__logo
+    .header__title
+        display inline-block
+        .header__text
+            font-weight 300
+            font-size 1.5em
+
+.header__optionList
+    display flex
+    text-align center
+
+    .header__option
+        width 55px
+        height 55px
+
+        &:first-child
+            background-color $color-red
+
+        &:last-child
+            background-color $color-yellow
+
+        .header__icon
+            color $color-bg

@@ -3,7 +3,8 @@
 <head>
     <title>PhotoEditor</title>
 
-    <link rel="stylesheet" href="./dist/css/app-bundle.css">
+    <link rel="stylesheet" href="http://localhost:9000/dist/css/app-bundle.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:300,400,700" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,20 +21,83 @@
         </figure>
 
         <div class="header__optionList">
-            <div class="header_option">
-                
+            <div class="header__option">
+                <a class="header__icon icon-upload" href="#"></a>
+            </div>
+
+            <div class="header__option">
+                <a class="header__icon icon-download" href="#"></a>
             </div>
         </div>
     </header>
 
+    <section class="editor">
+        <ul class="editor__filterList u-no-list">
+            <li class="editor__filter">
+                <div class="editor__filter-state">
+                    <a href="#" class="editor__icon icon-brightness"></a>
+                </div>
+            </li>
+            <li class="editor__filter">
+                <div class="editor__filter-state">
+                    <a href="#" class="editor__icon icon-contrast"></a>
+                </div>
+            </li>
+            <li class="editor__filter">
+                <div class="editor__filter-state">
+                    <a href="#" class="editor__icon icon-grayscale"></a>
+                </div>
+            </li>
+            <li class="editor__filter">
+                <div class="editor__filter-state">
+                    <a href="#" class="editor__icon icon-hue-rotate"></a>
+                </div>
+            </li>
+            <li class="editor__filter">
+                <div class="editor__filter-state">
+                    <a href="#" class="editor__icon icon-invert"></a>
+                </div>
+            </li>
+            <li class="editor__filter">
+                <div class="editor__filter-state">
+                    <a href="#" class="editor__icon icon-opacity"></a>
+                </div>
+            </li>
+            <li class="editor__filter">
+                <div class="editor__filter-state">
+                    <a href="#" class="editor__icon icon-saturate"></a>
+                </div>
+            </li>
+            <li class="editor__filter">
+                <div class="editor__filter-state">
+                    <a href="#" class="editor__icon icon-sepia"></a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="preview">
+        <div class="preview__image-container" id="image-preview">
+
+            <ul class="preview__filterValueList u-no-list">
+                <li class="filterValue">
+                    <input class="filter-range" type="range" name="" id="">
+                </li>
+            </ul>
+
+        </div>
+    </section>
 
     
 
-    <input class="filterInput" type="range" id="blur" value="1" min="0" max="5" step="0.1">
-    <input class="filterInput" type="range" id="brightness" value="1" min="0" max="5" step="0.1">
 
-    <div id="imageContainer"></div>
+    
 
-    <script type="application/javascript" src="./dist/js/app-bundle.js"></script>
+    <!-- <input class="filterInput" type="range" id="blur" value="1" min="0" max="5" step="0.1">
+    <input class="filterInput" type="range" id="brightness" value="1" min="0" max="5" step="0.1"> -->
+
+    <!-- <div id="imageContainer"></div> -->
+
+    <script type="application/javascript" src="http://localhost:9000/dist/js/app-bundle.js"></script>
 </body>
 </html>

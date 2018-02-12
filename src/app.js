@@ -1,16 +1,22 @@
+import "./styles/base/normalize.styl";
+import "./styles/base/reset.styl";
+import "./styles/base/util.styl";
+import "./styles/base/icons.styl";
+import "./styles/header.styl";
 import "./styles/editor.styl";
+import "./styles/preview.styl";
+
 import photo from "./images/you-dont-know-js.jpg";
-// import editor from "./js/editor.js";
 
 const inputBlur = document.getElementById("blur"),
       inputBrightness = document.getElementById("brightness"),
-      imageContainer = document.getElementById("imageContainer"),
+      imageContainer = document.getElementById("image-preview"),
       filtersInputs = document.getElementsByClassName("filterInput");
 
 const img = document.createElement("img");
 img.setAttribute("src", photo);
-img.className = "filter";
-imageContainer.append(img);
+img.className = "preview__image";
+imageContainer.appendChild(img);
 
 let val = null;
 

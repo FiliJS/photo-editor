@@ -1,0 +1,54 @@
+@import "./variables.styl"
+
+@font-face
+  font-family 'icons'
+  src url(icomoon-font-path + '/icons.ttf?ov7xbg') format('truetype'), 
+      url(icomoon-font-path + '/icons.woff?ov7xbg') format('woff'), 
+      url(icomoon-font-path + '/icons.svg?ov7xbg#icons') format('svg')
+  font-weight normal
+  font-style normal
+
+[class^="icon-"], [class*=" icon-"]
+  font-family 'icons' !important
+  speak none
+  font-style normal
+  font-weight normal
+  font-variant normal
+  text-transform none
+  line-height 1
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+.icon-sepia
+  &:before
+    content icon-sepia
+.icon-saturate
+  &:before
+    content icon-saturate
+.icon-grayscale
+  &:before
+    content icon-grayscale
+.icon-invert
+  &:before
+    content icon-invert
+.icon-opacity
+  &:before
+    content icon-opacity
+.icon-hue-rotate
+  &:before
+    content icon-hue-rotate
+.icon-brightness
+  &:before
+    content icon-brightness
+.icon-download
+  &:before
+    content icon-download
+.icon-upload
+  &:before
+    content icon-upload
+.icon-contrast
+  &:before
+    content icon-contrast
+

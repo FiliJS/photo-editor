@@ -8,17 +8,15 @@ import "./styles/preview.styl";
 
 import photo from "./images/you-dont-know-js.jpg";
 
-const inputBlur = document.getElementById("blur"),
-      inputBrightness = document.getElementById("brightness"),
+const brightness = document.getElementById("brightness"),
+      contrast = document.getElementById("contrast"),
       imageContainer = document.getElementById("image-preview"),
-      filtersInputs = document.getElementsByClassName("filterInput");
+      filtersInputs = document.getElementsByClassName("filter-range");
 
 const img = document.createElement("img");
 img.setAttribute("src", photo);
 img.className = "preview__image";
 imageContainer.appendChild(img);
-
-let val = null;
 
 function defaultFilters() {
     for(let i = 0; i < filtersInputs.length; i++) {
@@ -27,6 +25,8 @@ function defaultFilters() {
 }
 
 defaultFilters();
+
+let val = null;
 
 function update(filter, unit) {
     let newval = + filter.value;
@@ -38,16 +38,31 @@ function update(filter, unit) {
     }
 }
 
-function blur() {
-    update(inputBlur);
+function brightnessF() {
+    update(brightness);
 }
 
-function brightness() {
-    update(inputBrightness);
+function contrastF() {
+    update(contrast);
 }
 
-inputBlur.addEventListener("input", blur, false);
-inputBlur.addEventListener("input", blur, false);
+function grayscaleF() {
+    update(grayscale);
+}
 
-inputBrightness.addEventListener("input", brightness, false);
-inputBrightness.addEventListener("input", brightness, false);
+function invertF() {
+    update(invert);
+}
+
+
+brightness.addEventListener("input", brightnessF, false);
+brightness.addEventListener("input", brightnessF, false);
+
+contrast.addEventListener("input", contrastF, false);
+contrast.addEventListener("input", contrastF, false);
+
+grayscale.addEventListener("input", grayscaleF, false);
+grayscale.addEventListener("input", grayscaleF, false);
+
+invert.addEventListener("input", invertF, false);
+invert.addEventListener("input", invertF, false);
